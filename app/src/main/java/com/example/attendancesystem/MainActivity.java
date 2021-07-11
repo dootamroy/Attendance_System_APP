@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
         firebaseFirestore = FirebaseFirestore.getInstance();
         firestoreList = findViewById(R.id.attendanceRecycler);
 
-        Query query = firebaseFirestore.collection("Students");
+        Query query = firebaseFirestore
+                .collection("Students").orderBy("NUM", Query.Direction.DESCENDING);
 
         FirestoreRecyclerOptions<student> options = new FirestoreRecyclerOptions.Builder<student>()
                 .setQuery(query, new SnapshotParser<student>() {
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new Attendance_firestore_adapter(options);
 
         firestoreList.setHasFixedSize(true);
-        firestoreList.setLayoutManager(new LinearLayoutManager(this));
+        firestoreList.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         firestoreList.setAdapter(adapter);
 
 

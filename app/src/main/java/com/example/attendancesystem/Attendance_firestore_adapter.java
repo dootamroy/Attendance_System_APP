@@ -1,6 +1,5 @@
 package com.example.attendancesystem;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +21,8 @@ public class Attendance_firestore_adapter extends FirestoreRecyclerAdapter<stude
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull Attendance_firestore_adapter.view_holder holder, int position,@NonNull student model) {
-        holder.studentRoll.setText(model.getNumber_of_class_attended());
+    protected void onBindViewHolder(@NonNull Attendance_firestore_adapter.view_holder holder, int position, @NonNull student model) {
+        holder.studentRoll.setText(model.getNUM()+ "");
     }
 
     @NonNull
@@ -33,19 +32,18 @@ public class Attendance_firestore_adapter extends FirestoreRecyclerAdapter<stude
         return new view_holder(view);
     }
 
+
     //view holder
 
     public class view_holder extends RecyclerView.ViewHolder{
 
-
-        private final TextView studentRoll;
+        TextView studentRoll;
 
 
         public view_holder(@NonNull View itemView) {
             super(itemView);
 
-
-            this.studentRoll = itemView.findViewById(R.id.student_roll);
+            studentRoll = itemView.findViewById(R.id.student_roll);
 
         }
     }

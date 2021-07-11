@@ -2,18 +2,18 @@ package com.example.attendancesystem;
 
 public class student {
 
-    private int Number_of_class_attended;
+    private int NUM;
 
 
-    public student(int number_of_class_attended) {
-        this.Number_of_class_attended = number_of_class_attended;
+    public student(int NUM) {
+        this.NUM = NUM;
     }
 
-    public int getNumber_of_class_attended() {
-        return Number_of_class_attended;
+    public int getNUM() {
+        return NUM;
     }
 
-    public void setNumber_of_class_attended(int number_of_class_attended) {
-        this.Number_of_class_attended = number_of_class_attended;
+    public void setNUM(int NUM) {
+        this.NUM = NUM;
     }
 }
