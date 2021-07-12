@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
 
     defaultConfig {
         applicationId "com.example.attendancesystem"
-        minSdkVersion 29
-        targetSdkVersion 29
+        minSdkVersion 24
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -40,6 +40,10 @@ dependencies {
 
     // FirebaseUI for Cloud Firestore
     implementation 'com.firebaseui:firebase-ui-firestore:7.2.0'
+
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.paging:paging-runtime:2.1.2"
+
 
 
 
