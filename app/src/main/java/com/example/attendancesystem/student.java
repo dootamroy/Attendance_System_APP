@@ -3,10 +3,12 @@ package com.example.attendancesystem;
 public class student {
 
     int NUM;
+    String Roll;
 
-    public student(int NUM) {
+    public student(int NUM, String Roll) {
 
         this.NUM = NUM;
+        this.Roll = Roll;
     }
 
     public student(){}
@@ -19,5 +21,13 @@ public class student {
     public void setNUM(int NUM) {
 
         this.NUM = NUM;
+    }
+
+    public String getRoll() {
+        return Roll;
+    }
+
+    public void setRoll(String roll) {
+        this.Roll = roll;
     }
 }

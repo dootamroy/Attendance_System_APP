@@ -45,6 +45,7 @@ public class studentFirestoreAdapter extends FirestoreRecyclerAdapter<student, s
     protected void onBindViewHolder(@NonNull  studentFirestoreAdapter.studentViewHolder holder, int position, @NonNull  student model) {
 
         holder.num.setText("Classes Attended: " + model.getNUM());
+        holder.student_ID.setText("Roll No. " + model.getRoll());
     }
 
     @NonNull
@@ -57,11 +58,13 @@ public class studentFirestoreAdapter extends FirestoreRecyclerAdapter<student, s
     public class studentViewHolder extends RecyclerView.ViewHolder{
 
         private final TextView num;
+        private final TextView student_ID;
 
         public studentViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            num = itemView.findViewById(R.id.student_name);
+            num = itemView.findViewById(R.id.student_attendance);
+            student_ID = itemView.findViewById(R.id.student_id);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

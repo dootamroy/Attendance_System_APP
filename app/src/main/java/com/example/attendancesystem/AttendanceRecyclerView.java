@@ -63,6 +63,7 @@ public class AttendanceRecyclerView extends AppCompatActivity {
                         student inv = snapshot.toObject(student.class);
                         String item_id = snapshot.getId();
                         //inv.setItem_id(item_id);
+                        inv.setRoll(item_id);
 
                         return inv;
                     }
